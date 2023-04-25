@@ -108,8 +108,9 @@ a {
  BACKGROUND GRADIENT ANIMATION
 ======================================*/
 .page-bg {
-  background: linear-gradient(132deg, #4a7778, #726c9d, #56577b, #2c2b38, #202225);
-  background-size: 1000% 1000%;
+  /* background: linear-gradient(132deg, #4a7778, #726c9d, #56577b, #2c2b38, #202225); */
+  background: url('https://motionarray-portfolio.imgix.net/preview-83721-73b2ffab8d22cad99c5c66f9b51b4993-high.jpg') no-repeat center/cover;
+  /* background-size: 1000% 1000%; */
   -webkit-animation: bgGradient 39s ease infinite;
   animation: bgGradient 39s ease infinite;
 }
@@ -1017,17 +1018,22 @@ a {
 .tgilive svg {
   width: 100%;
   height: 100%;
+  transform-origin: center;
+  animation: move 8s ease-in-out infinite alternate;
 }
 
 @keyframes move {
   0% {
-    transform: translateY(0);
+    transform: scale(1.1) translateY(0);
   }
-
+  50% {
+    transform: scale(1.1) translateY(-20px);
+  }
   100% {
-    transform: translateY(10px);
+    transform: scale(1.1) translateY(0);
   }
 }
+
 
 .move {
   animation: move 1s ease-in-out infinite alternate;
@@ -1041,6 +1047,7 @@ a {
   left: 0;
   width: 200px;
   padding: 10px;
+  margin-top: 10px;
   opacity: 0.5;
   z-index: 1000;
   transition: opacity 0.5s ease-in-out;
@@ -1293,10 +1300,15 @@ a {
   }
   .logo2 {
     top: -4%;
+    margin-top: 0px;
   }
 
   .hamburger-menu ul li a {
     font-size: 24px;
+  }
+
+  .hamburger-menu ul {
+    padding: 100px 20px;
   }
 
   .hamburger-menu label {
@@ -1312,9 +1324,62 @@ a {
 
   .logo2 {
     top: -4%;
+    margin-top: 0px;
   }
 
   .hamburger-menu ul li a {
-    font-size: 30px;
+    font-size: 36px;
+  }
+}
+
+.wind {
+  width: 150px;
+  background-color: #eee;
+  height: 2px;
+  position: absolute;
+  top: 30%;
+  animation-name: wind;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.wind::before {
+  content: '';
+  position: absolute;
+  left: 200px;
+  width: 100px;
+  height: 1px;
+  background-color: #eee;
+  top: 100px;
+}
+.wind::after {
+  content: '';
+  position: absolute;
+  left: 400px;
+  width: 180px;
+  height: 1px;
+  background-color: #eee;
+  top: 30px;
+}
+
+@keyframes wind {
+  0% {
+    left: -1000px;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    left: 1500px;
+    opacity: 1;
+  }
+  80% {
+    left: 1000px;
+    opacity: 0;
+  }
+  100% {
+    left: -1000px;
+    opacity: 0;
   }
 }

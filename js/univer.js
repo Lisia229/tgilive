@@ -30,9 +30,9 @@ tl.staggerTo(
   '#background',
   1,
   {
-    'background-image': 'linear-gradient(#D4ADC3, #72B6FF)'
+    'background-image': 'linear-gradient(#000,#333,#000, #111111)'
   },
-  0.5,
+  2,
   0
 )
   .staggerTo(
@@ -100,7 +100,8 @@ tl.staggerTo(
   .to('#city-right-2', 1, { fill: '#D5DDC2' }, 0)
   .to('#city-left-2', 1, { fill: '#D5DDC2' }, 0)
   .to('#city-left-3', 1, { fill: '#D5DDC2' }, 0)
-  .to('#sun', 1, { ease: Power4.easeInOut, y: -322 }, 0)
+  .to('#earth', 1, { ease: Power4.easeInOut, y: 200 }, 0)
+  .to('#land', 1, { ease: Power4.easeInOut, y: -320 }, 0)
   .to('#moon', 1, { ease: Power4.easeInOut, y: -300 }, 0)
   .progress(1)
   .progress(0)

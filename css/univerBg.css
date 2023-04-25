@@ -7,10 +7,65 @@ body {
   height: 125vh;
 }
 
+#moon {
+  display: block;
+  position: absolute;
+  top: 2%;
+  left: 20%;
+  width: 150px;
+  /* animation: rotate 60s linear infinite; */
+}
+
+#earth {
+  display: block;
+  position: absolute;
+  top: -20%;
+  left: 20%;
+  width: 150px;
+  /* animation: rotate 60s linear infinite; */
+}
+
+#land {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 20%;
+  width: 100%;
+  /* animation: rotate 60s linear infinite; */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #background {
-  background-image: linear-gradient(#463C77, #0E355D);
+  /* background-image: linear-gradient(#463c77, #0e355d); */
   position: absolute;
   top: 0;
   width: 100%;
   z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  #background svg {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #moon{
+    display: none;
+  }
+
+  #earth{
+    display: none;
+  }
+
+  #land{
+    display: none;
+  }
 }
