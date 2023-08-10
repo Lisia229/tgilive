@@ -55,6 +55,10 @@ a {
   transform: scale(0.025);
 }
 
+.menu-en{
+  font-size: 18px;
+}
+
 .logo-wrapper {
   stroke-dasharray: 450;
   stroke-dashoffset: 450;
@@ -1142,7 +1146,7 @@ a {
 
 .hamburger-menu ul li {
   margin: 0;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -1152,7 +1156,7 @@ a {
   color: #ffffff7e;
   font-weight: 100;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 30px;
   transition: opacity 0.5s ease-in-out;
 }
 
